@@ -588,6 +588,16 @@ def defilement (list):
             print(character, end = "", flush=True)
             time.sleep(0.01)
         print()
+def defilement_dialogue(list):
+    for element in list:
+        input("Tapez ENTRER")
+        for character in element: 
+            print(character, end = "", flush=True)
+            time.sleep(0.01)
+            
+        print()
+
+
 print("Bienvenue dans: _The lost crown_")
 
 def trame_introduction():
@@ -684,14 +694,12 @@ def commencement_histoire():
     ]
 
     if ChoixHéros=="1":#Affichage du texte pour Salie
-        input("Tapez ENTRER")
-        defilement(répliques_Salie)
-        input("Tapez ENTRER")
+        defilement_dialogue(répliques_Salie)
+        
 
     elif ChoixHéros=="2":#Affichage du texte pour Magnus
-            input("Tapez ENTRER")
-            defilement(répliques_Magnus)
-            input("Tapez ENTRER")
+        defilement_dialogue(répliques_Magnus)
+            
 def transition_1er_combat():
     trame = [
     "*6 mois se sont écoulés",
@@ -731,9 +739,9 @@ def fin_introduction():
     ]
 
     if ChoixHéros=="1":#Affichage du texte pour Salie
-        input("Tapez ENTRER")
-        defilement(répliques)
-        input("Tapez ENTRER")
+        
+        defilement_dialogue(répliques)
+       
 
     elif ChoixHéros=="2":#Affichage du texte pour Magnus
         répliques[0] = "Magnus:"
@@ -741,9 +749,9 @@ def fin_introduction():
         répliques[9] = "Magnus:"
         répliques[13] = "Magnus:"
         répliques[14] = "J'ai ressentis les fruits de mon entrainement aujoud'hui... Ca va mal finir pour ces fichus monstres !"
-        input("Tapez ENTRER")
-        defilement(répliques)
-        input("Tapez ENTRER")
+        
+        defilement_dialogue(répliques)
+        
 
 
 def prairie_niveau_1():
@@ -815,16 +823,16 @@ def prairie_niveau_2():
     ]
 
     if ChoixHéros=="1":#Salie
-        input("Tapez ENTRER")
-        defilement(répliques_prairie_fin_de_zone)
-        input("Tapez ENTRER")
+        
+        defilement_dialogue(répliques_prairie_fin_de_zone)
+       
 
     elif ChoixHéros=="2":#Magnus
         répliques_prairie_fin_de_zone[0] = "Magnus:"
         répliques_prairie_fin_de_zone[3] = "Magnus:"
-        input("Tapez ENTRER")
-        defilement(répliques_prairie_fin_de_zone)
-        input("Tapez ENTRER")
+       
+        defilement_dialogue(répliques_prairie_fin_de_zone)
+        
 #Combat final prairie 
 
 
